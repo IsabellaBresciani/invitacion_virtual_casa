@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Inauguración de Nuestra Casa! 🏡</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>¡Invitación! Inauguración de Casa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,281 +17,214 @@
             background: #f5e6d3;
             min-height: 100vh;
             padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #d4a574 0%, #c9915f 100%);
-            border-radius: 2px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            margin-bottom: 40px;
-            position: relative;
-            border: 3px solid #8b6f47;
-        }
-
-        .header::before {
-            content: '✦';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 30px;
-            color: #8b6f47;
-        }
-
-        .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.2em;
-            color: #ffffff;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            letter-spacing: 2px;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            color: #f5e6d3;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .event-info {
-            background: white;
-            border: 2px solid #8b6f47;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid #e8d4c0;
-        }
-
-        .info-row:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .info-item {
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content: center;
         }
 
-        .info-icon {
-            font-size: 2.5em;
-            min-width: 50px;
+        .invitation {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border: 4px solid #8b6f47;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
             text-align: center;
         }
 
-        .info-content h3 {
+        .label {
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            color: #8b6f47;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .title {
             font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: #8b6f47;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .date-line {
             font-size: 1.3em;
-            color: #8b6f47;
-            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
 
-        .info-content p {
-            color: #666;
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: #d4a574;
+            margin: 30px auto;
+        }
+
+        .info-block {
+            margin: 35px 0;
+        }
+
+        .info-label {
+            font-size: 0.85em;
+            color: #8b6f47;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .info-content {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .location-info {
             font-size: 1em;
-            font-weight: 500;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.6;
         }
 
-        .location-section {
-            margin-bottom: 40px;
+        .map-container {
+            margin: 40px 0;
+            border: 3px solid #d4a574;
         }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            color: #8b6f47;
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #d4a574;
-            letter-spacing: 1px;
-        }
-
-        .location-embed {
+        .map-container iframe {
             width: 100%;
-            border-radius: 2px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border: 3px solid #8b6f47;
-        }
-
-        .location-embed iframe {
-            width: 100%;
-            height: 350px;
+            height: 300px;
             border: none;
+            display: block;
+        }
+
+        .photos-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e8d4c0;
+        }
+
+        .photos-label {
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            color: #8b6f47;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 25px;
         }
 
         .photos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
         }
 
         .photo-item {
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border: 8px solid #f5e6d3;
-            background: white;
-            transform: rotate(var(--rotation));
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .photo-item:hover {
-            transform: rotate(var(--rotation)) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 5px solid #f5e6d3;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1;
         }
 
         .photo-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
-            aspect-ratio: 1;
         }
 
-        .photo-item:nth-child(1) { --rotation: -3deg; }
-        .photo-item:nth-child(2) { --rotation: 2deg; }
-        .photo-item:nth-child(3) { --rotation: -2deg; }
-        .photo-item:nth-child(4) { --rotation: 3deg; }
-        .photo-item:nth-child(5) { --rotation: -1deg; }
-        .photo-item:nth-child(6) { --rotation: 2deg; }
-        .photo-item:nth-child(7) { --rotation: -2.5deg; }
-        .photo-item:nth-child(8) { --rotation: 1.5deg; }
-        .photo-item:nth-child(9) { --rotation: -1.5deg; }
-        .photo-item:nth-child(10) { --rotation: 2.5deg; }
-        .photo-item:nth-child(11) { --rotation: -2deg; }
-        .photo-item:nth-child(12) { --rotation: 1deg; }
-
-        .footer-message {
-            text-align: center;
-            padding: 40px 20px;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+        .closing {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e8d4c0;
+            font-size: 1.2em;
             color: #8b6f47;
             font-style: italic;
+            font-weight: 600;
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #8b6f47;
+            font-weight: 600;
             letter-spacing: 1px;
         }
 
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.2em;
+        @media (max-width: 600px) {
+            .invitation {
+                padding: 30px 20px;
+                border: 3px solid #8b6f47;
             }
 
-            .info-row {
-                grid-template-columns: 1fr;
-                gap: 15px;
+            .title {
+                font-size: 2em;
+            }
+
+            .date-line {
+                font-size: 1.1em;
+            }
+
+            .info-content {
+                font-size: 1.2em;
             }
 
             .photos-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 15px;
-            }
-
-            .location-embed iframe {
-                height: 250px;
-            }
-
-            .section-title {
-                font-size: 1.5em;
-            }
-
-            .info-item {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
                 gap: 10px;
             }
 
-            .info-icon {
-                font-size: 2em;
+            .map-container iframe {
+                height: 250px;
             }
-        }
-
-        .decoration {
-            text-align: center;
-            font-size: 1.5em;
-            color: #d4a574;
-            margin: 30px 0;
-            letter-spacing: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Principal -->
-        <div class="header">
-            <h1>TE INVITAMOS</h1><p style="font-size: 1.4em; margin-top: 15px; color: #f5e6d3;">el sábado 5 de septiembre a la inauguración de la casa de Los Tanitos</p>
-            
+    <div class="invitation">
+        <!-- Etiqueta de invitación -->
+        <div class="label">📮 INVITACIÓN</div>
+
+        <!-- Título -->
+        <div class="title">¡Inauguración de<br>Nuestra Casa!</div>
+
+        <!-- Información principal -->
+        <div class="date-line">
+            Te invitamos el sábado<br>
+            <strong>5 de septiembre</strong><br>
+            a la casa de <strong>Los Tanitos</strong>
         </div>
 
-        <!-- Información del Evento -->
-        <div class="event-info">
-            <div class="info-row">
-                <div class="info-item">
-                    <div class="info-icon">🕐</div>
-                    <div class="info-content">
-                        <h3>Hora</h3>
-                        <p>12:00 del mediodía</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon">🍽️</div>
-                    <div class="info-content">
-                        <h3>Celebración</h3>
-                        <p>Almuerzo en familia</p>
-                    </div>
-                </div>
-            </div>
+        <div class="divider"></div>
 
-            <div class="info-row">
-                <div class="info-item">
-                    <div class="info-icon">📍</div>
-                    <div class="info-content">
-                        <h3>Ubicación</h3>
-                        <p>Nuevo Quilmes, Don Bosco</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon">🏘️</div>
-                    <div class="info-content">
-                        <h3>Barrio Privado</h3>
-                        <p>Lote 1I07</p>
-                    </div>
-                </div>
+        <!-- Hora -->
+        <div class="info-block">
+            <div class="info-label">⏰ Hora del Evento</div>
+            <div class="info-content">12:00 del mediodía</div>
+            <div class="location-info">Almuerzo</div>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="info-block">
+            <div class="info-label">📍 Ubicación Exacta</div>
+            <div class="location-info">
+                <strong>Barrio Privado Nuevo Quilmes</strong><br>
+                Lote 1I07 - Don Bosco, Provincia de Buenos Aires
             </div>
         </div>
 
-        <div class="decoration">✦ ✦ ✦</div>
-
-        <!-- Ubicación en Mapa -->
-        <div class="location-section">
-            <h2 class="section-title">Ubícanos en el Mapa</h2>
-            <div class="location-embed">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3280.2601610377505!2d-58.2875885!3d-34.6986175!3m2!1i1024!2i768!4f13.1!2m1!1snuevo%20quilmes!5e0!3m2!1ses-419!2sar!4v1788133963694!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
+        <!-- Mapa -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3280.2601610377505!2d-58.2875885!3d-34.6986175!3m2!1i1024!2i768!4f13.1!2m1!1snuevo%20quilmes!5e0!3m2!1ses-419!2sar!4v1788133963694!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
 
-        <div class="decoration">✦ ✦ ✦</div>
-
-        <!-- Collage de Fotos -->
-        <div>
-            <h2 class="section-title">Nuestro Proyecto</h2>
+        <!-- Fotos -->
+        <div class="photos-section">
+            <div class="photos-label">📸 Nuestro Proyecto</div>
             <div class="photos-grid">
                 <div class="photo-item">
                     <img src="FB_IMG_1451882882262.jpg" alt="Foto">
@@ -332,11 +265,13 @@
             </div>
         </div>
 
-        <div class="decoration">✦ ✦ ✦</div>
+        <!-- Cierre -->
+        <div class="closing">
+            ¡Te esperamos!
+        </div>
 
-        <!-- Mensaje Final -->
-        <div class="footer-message">
-            ¡Te esperamos para celebrar este momento especial!
+        <div class="footer-note">
+            Los Tanitos
         </div>
     </div>
 </body>
