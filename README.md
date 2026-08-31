@@ -1,48 +1,48 @@
 # 🏡 Invitación Virtual - Inauguración de Casa
 
-Una página interactiva y divertida para invitar a tus amigos y familia a la inauguración de tu casa. Incluye fotos, mapa, y un formulario para confirmar asistencia.
+Una página vintage y elegante para invitar a tus amigos y familia a la inauguración de tu casa. Incluye información destacada, mapa, y un hermoso collage de fotos.
 
 ## 🌟 Características
 
-✨ **Diseño Moderno y Atractivo**
-- Gradientes de colores llamativos
-- Animaciones suaves y confetti de celebración
-- Completamente responsive (funciona en móvil y desktop)
+✨ **Diseño Vintage Elegante**
+- Paleta de colores cálidos (tierra y oro)
+- Tipografía clásica y sofisticada
+- Márgenes y bordes inspirados en la década de 1970
+- Completamente responsive
 
-📸 **Carrusel de Fotos**
-- Pasa automáticamente cada 5 segundos
-- Controles manuales con flechas
-- Indicadores de posición (dots)
-- 12 fotos de tu proyecto
+📸 **Collage de Fotos**
+- Todas tus 12 fotos en un collage artístico
+- Cada foto rotada ligeramente para efecto vintage
+- Bordes blancos como marcos antiguos
+- Hover interactivo con zoom suave
 
 📍 **Mapa Incrustado**
 - Google Maps integrado
 - Muestra la ubicación exacta: Barrio Privado Nuevo Quilmes, Lote 1I07, Don Bosco
 
-📋 **Formulario Interactivo**
-- Captura nombre, email, teléfono
-- Opciones de asistencia (Sí/No/Aún no sé)
-- Espacio para comentarios
-- **Se conecta directamente a Google Sheets** ✅
+ℹ️ **Información Destacada**
+- Hora del evento: 12:00 del mediodía (Almuerzo)
+- Ubicación clara y elegante
+- Diseño limpio y fácil de leer
 
-## 📸 Vista Previa
+## 📸 Estructura de la Página
 
 ```
-┌─────────────────────────────────┐
-│  ¡Inauguración de Nuestra Casa! │
-│     🎉 🏡 Te invitamos...        │
-├─────────────────────────────────┤
-│          [Carrusel Fotos]        │
-│      ←  [Imagen rotando]  →      │
-├─────────────────────────────────┤
-│  ⏰ 12:00 del mediodía          │
-│  📍 Nuevo Quilmes, Don Bosco    │
-│  [Google Maps Incrustado]       │
-├─────────────────────────────────┤
-│  📋 Confirma tu Asistencia      │
-│  [Formulario con campos]        │
-│  [Botón Confirmar]              │
-└─────────────────────────────────┘
+┌──────────────────────────────────────────┐
+│   ¡Inauguración de Nuestra Casa!         │
+│  (Diseño vintage dorado/tierra)          │
+├──────────────────────────────────────────┤
+│  🕐 12:00 mediodía  |  🍽️ Almuerzo      │
+│  📍 Nuevo Quilmes   |  🏘️ Lote 1I07     │
+├──────────────────────────────────────────┤
+│    Ubícanos en el Mapa                   │
+│    [Google Maps Incrustado]              │
+├──────────────────────────────────────────┤
+│         Nuestro Proyecto                 │
+│    [Collage de 12 fotos rotadas]         │
+├──────────────────────────────────────────┤
+│  ¡Te esperamos para celebrar!            │
+└──────────────────────────────────────────┘
 ```
 
 ## 🚀 Inicio Rápido
@@ -58,36 +58,13 @@ Una página interactiva y divertida para invitar a tus amigos y familia a la ina
 
 Simplemente abre `index.html` en tu navegador.
 
-## ⚙️ Configuración del Formulario
-
-El formulario se conecta a una **Google Sheet** usando **Google Apps Script**.
-
-### Pasos de Configuración:
-
-1. **Copia el script** (`google_apps_script.gs`)
-2. **Abre tu Google Sheet**
-3. Ve a Herramientas → Editor de Secuencias de Comandos
-4. Pega el código y guarda
-5. Haz click en "Desplegar" → "Nueva Implementación"
-6. Elige "Aplicación Web" → Desplegar
-7. **Copia la URL generada**
-8. En `index.html`, busca esta línea:
-   ```javascript
-   const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/d/YOUR_SCRIPT_ID/usercontent';
-   ```
-9. Reemplaza `YOUR_SCRIPT_ID/usercontent` con tu URL
-
-**⚠️ Lee INSTRUCCIONES.md para pasos detallados con imágenes y solución de problemas**
-
 ## 📁 Estructura de Archivos
 
 ```
 invitacion-virtual/
-├── index.html                    # Página principal (abre esto)
-├── google_apps_script.gs        # Script para Google Sheets
+├── index.html                    # Página principal
 ├── README.md                     # Este archivo
-├── INSTRUCCIONES.md             # Pasos detallados
-├── .gitignore                   # Configuración de git
+├── INSTRUCCIONES.md             # Guía de publicación
 ├── Fotos/
 │   ├── FB_IMG_1451882882262.jpg
 │   ├── FB_IMG_1451882906975.jpg
@@ -96,74 +73,68 @@ invitacion-virtual/
 
 ## 🎨 Personalización
 
-### Cambiar Colores
+### Cambiar Colores Principales
 
-En `index.html`, busca la sección `<style>` (línea ~25) y cambia:
-- `#667eea` → Tu color principal
-- `#764ba2` → Tu color secundario
+En `index.html`, busca la sección `<style>` y reemplaza:
+- `#d4a574` → Tu color principal (actualmente dorado)
+- `#c9915f` → Variante más oscura
+- `#8b6f47` → Acentos (texto)
+- `#f5e6d3` → Fondo claro
+
+Ejemplo: Si quieres azul vintage, usa:
+```css
+#d4a574 → #6b8fb5
+#c9915f → #556b8c
+#8b6f47 → #3d4f6b
+#f5e6d3 → #e8eff5
+```
 
 ### Cambiar Textos
 
 Busca y reemplaza:
 - "¡Inauguración de Nuestra Casa!" → Tu título
 - "12:00 del mediodía" → Tu horario
+- "Almuerzo en familia" → Tu tipo de evento
 - "Nuevo Quilmes, Don Bosco" → Tu ubicación
-- Los emojis que quieras
+- "Lote 1I07" → Tu dirección
 
 ### Cambiar Fotos
 
 Reemplaza las imágenes JPG con tus propias fotos (mismo nombre de archivo).
 
-### Cambiar Google Sheet
+### Ajustar Rotaciones de Fotos
 
-En `google_apps_script.gs`, puedes modificar qué columnas se guardan y qué información se captura.
+En el CSS, puedes cambiar los valores `--rotation` en cada `.photo-item:nth-child(n)` para variar la rotación de cada foto.
 
 ## 🔧 Requisitos
 
-- **Navegador moderno** (Chrome, Firefox, Safari, Edge)
-- **Conexión a Internet**
-- **Google Account** (para Google Sheets y Apps Script)
-- **GitHub** (para publicar con GitHub Pages - opcional)
-
-## 📊 Datos Capturados
-
-El formulario guarda en Google Sheets:
-- Fecha y hora de confirmación
-- Nombre completo
-- Email
-- Teléfono
-- Respuesta de asistencia (Sí/No/Aún no sé)
-- Comentarios adicionales
+- Navegador moderno (Chrome, Firefox, Safari, Edge)
+- Conexión a Internet
+- GitHub (para publicar con GitHub Pages - opcional)
 
 ## 🎯 Casos de Uso
 
 ✅ Invitación a inauguración de casa
 ✅ Celebración de aniversario
-✅ Evento familiar importante
+✅ Evento familiar elegante
 ✅ Cumpleaños especial
-✅ Cualquier celebración que requiera confirmación
+✅ Cualquier celebración que requiera un toque vintage
 
 ## 🐛 Solución de Problemas
 
-### El formulario no envía datos
-→ Verifica que copiaste la URL completa del Google Apps Script
+### Las fotos no se cargan
+→ Verifica que todas las imágenes estén en la misma carpeta que index.html
 
-### No aparecen datos en la Google Sheet
-→ Asegúrate de desplegar el script como "Aplicación Web"
+### El mapa no aparece
+→ Revisa que tengas conexión a Internet
 
 ### La página no carga desde GitHub Pages
-→ Espera 5-10 minutos y verifica que subiste todos los archivos
-
-**Lee INSTRUCCIONES.md para más detalles**
+→ Espera 5-10 minutos después de habilitar Pages
 
 ## 📝 Licencia
 
-Libre para usar y personalizar. Disfruta tu celebración! 🎉
-
-## 👤 Autor
-
-Creado con ❤️ para hacer tu celebración especial
+Libre para usar y personalizar. ¡Disfruta tu celebración! 🎉
 
 ---
 
-¿Preguntas? Revisa INSTRUCCIONES.md o consulta la consola del navegador (F12) para errores.
+¿Preguntas? Abre la consola del navegador (F12) para ver errores.
